@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
+
 def weight_average(my_list=[]):
-    if my_list is not None:
-        weighted_numerator = 0
-        weight_sum = 0
-        for score, weight in my_list:
-            weighted_numerator += (score * weight)
-            weight_sum += weight
-        average = (weighted_numerator / weight_sum)
-        return average
+    if my_list:
+        w_a = 0.0
+        divs = 0
+        divd = 0
+        for i in my_list:
+            divd += i[0] * i[1]
+            divs += i[1]
+        w_a = divd / divs
+        return w_a
+    return (0)
